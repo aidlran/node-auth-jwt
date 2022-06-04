@@ -1,7 +1,7 @@
 {
   "name": "node-auth-jwt",
   "description": "JWT implementation.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "Aidan Loughran",
   "repository": "github:aidlran/node-auth-jwt",

@@ -13,7 +13,7 @@ module.exports.save = payload => (request, response, next) => {
 	response.cookie('JWT', JWT.encode(payload, process.env.SESSION_SECRET), {
 		httpOnly: true,
 		secure: true,
-		maxAge: 1000 * 60 * 60 * 24 // 1 day
+		maxAge: process.env.SESSION_MAX_AGE ? Number(process.env.SESSION_MAX_AGE) : 1000 * 60 * 60 * 24 // 1 day
 	});
 	next();
 };
